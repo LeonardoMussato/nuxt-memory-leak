@@ -1,0 +1,141 @@
+@import "./colors.scss";
+
+$title: "Bartender";
+$body: "Montserrat";
+$paragraph: "Bartender";
+$serif: "Bree Serif";
+$sanserif: "Roboto";
+
+@font-face {
+  font-family: "Hometown";
+  src: local("Hometown"), url(~/assets/font/Hometown.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Evogria";
+  src: local("Evogria"), url(~/assets/font/Evogria.woff) format("woff");
+}
+
+@mixin titles($color: $primary-color, $size: 1em) {
+  font: bold $size "Manrope", sans-serif;
+  color: $color;
+}
+
+@mixin paragraph($color: $lightest-color, $size: 1em) {
+  font: $size "Manrope", -apple-system, system-ui, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif;
+  color: $color;
+  word-wrap: break-word;
+}
+
+.body-highlight {
+  font-weight: 700;
+  font-style: italic;
+  color: $primary-color-light;
+}
+
+.light-from-up {
+  @supports (
+    (background-clip: text) or (-webkit-background-clip: text) or
+      (-moz-background-clip: text)
+  ) {
+    background: rgb(162, 246, 255);
+    background: -moz-linear-gradient(
+      180deg,
+      rgba(255, 25, 183, 1) 0%,
+      rgba(131, 215, 255, 1) 70%
+    );
+    background: -webkit-linear-gradient(
+      180deg,
+      rgba(255, 25, 183, 1) 0%,
+      rgba(131, 215, 255, 1) 70%
+    );
+    background: linear-gradient(
+      180deg,
+      rgba(255, 25, 183, 1) 0%,
+      rgba(131, 215, 255, 1) 70%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a2f6ff",endColorstr="#ff19b7",GradientType=1);
+
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+  color: #ffffff;
+  width: fit-content;
+  height: fit-content;
+
+  font-weight: normal;
+}
+
+.light-from-bottom {
+  @supports (
+    (background-clip: text) or (-webkit-background-clip: text) or
+      (-moz-background-clip: text)
+  ) {
+    background: rgb(162, 246, 255);
+    background: -moz-linear-gradient(
+      0deg,
+      rgba(255, 25, 183, 1) 0%,
+      rgba(131, 215, 255, 1) 70%
+    );
+    background: -webkit-linear-gradient(
+      0deg,
+      rgba(255, 25, 183, 1) 0%,
+      rgba(131, 215, 255, 1) 70%
+    );
+    background: linear-gradient(
+      0deg,
+      rgba(255, 25, 183, 1) 0%,
+      rgba(131, 215, 255, 1) 70%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a2f6ff",endColorstr="#ff19b7",GradientType=1);
+
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+  color: #ffffff;
+  width: fit-content;
+  height: fit-content;
+
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.section-title {
+  font-family: "Hometown";
+  font-size: 3em;
+}
+
+.cursive {
+  font-family: "Hometown";
+}
+
+.sub-title {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.neon {
+  text-shadow: 0 0 7px #ffffffbb, 0 0 10px #e89cff66, 0 0 21px #ffffff55,
+    0 0 32px #ff00c880, 0 0 50px #ff00dd;
+}
+
+.neon-white {
+  text-shadow: 0 0 7px #ffffffbb, 0 0 10px #ffffff66, 0 0 21px #f49dff55,
+    0 0 32px #ffffff80, 0 0 50px #ffffff;
+}

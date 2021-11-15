@@ -1,0 +1,37 @@
+$primary-color: #af00d1ff;
+$primary-color-dark: rgb(119, 0, 143);
+$primary-color-x-dark: #3e1d48;
+$primary-color-light: #ff00ffff;
+$dark-color-light: #26005aff;
+$dark-color: #000000ff;
+$lightest-color: #feffffff;
+$semi-transparent: #ffffff50;
+
+//Unused for now
+$secondary-color-light: #a0c8eaff;
+$secondary-color: #a0c8eaaa;
+
+//default color for all texts
+$text-color: $lightest-color;
+
+//opacity
+$x-light-opacity: 0.1;
+$light-opacity: 0.3;
+$medium-opacity: 0.5;
+$high-opacity: 0.8;
+
+@mixin colored-background-with-opacity(
+  $color: $dark-color,
+  $opacity: $medium-opacity
+) {
+  background-color: $color;
+  opacity: $opacity;
+}
+
+.color-primary {
+  color: $primary-color;
+}
+
+.color-primary-light {
+  color: $primary-color-light;
+}

@@ -1,0 +1,11 @@
+@mixin border-bottom($color: $primary-color-light) {
+  border-bottom: 0.05px solid $color;
+}
+
+@mixin border-right($color: $primary-color-light) {
+  border-right: 0.05px solid $color;
+}
+
+@mixin border-all($color) {
+  border: 0.05px solid $color;
+}
